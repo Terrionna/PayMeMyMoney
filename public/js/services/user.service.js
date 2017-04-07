@@ -1,6 +1,6 @@
 (function() {
-  angular.module('mymeanblog')
-          .factory('UserService', UserService);
+  angular.module('paymemymoney')
+        .factory('UserService', UserService);
 
   UserService.$inject = ['$http', '$window'];
 
@@ -16,32 +16,35 @@
                   });
     }
     function signup(user){
-      return $http.post('signup', user){
-        then(function(response){
-          return response;
-        });
+      return $http.post('/signup', user)
+                  .then(function(response){
+                    return response; // this sometimes does not work
+                                    // should be available in the next
+                                    // then statement.
+                  });
     }
     function getAll(){
       return $http.get(base)
                   .then(function(response){
                     console.log(response);
-                  })
+                  });
     }
-    function getOne(useer){
-      var url = '${base}/${user._id}';
+    function getOne(user){
+      var url = `${base}/${user._id}`;
       return $http.get(url)
-                  .then(function(repsonse){
+                  .then(function(response){
                     console.log(response);
                   });
+    }
     function update(user){
-      var url = '${base}/${user._id}';
+      var url = `${base}/${user._id}`;
       return $http.put(url, user)
                   .then(function(response){
                     console.log(response);
                   });
     }
     function deleteUser(user){
-      var url = '${base}/${user._id}';
+      var url = `${base}/${user._id}`;
       return $http.delete(url)
                   .then(function(response){
                     console.log(response);
@@ -59,12 +62,13 @@
         }
       } else {
         return null;
+      }
     }
     function saveToken(token){
-      localStorage.setItem('mymeanblog-token', token);
+      localStorage.setItem('paymemymoney-token', token);
     }
     function getToken(){
-      return localStorage.getItem('mymeanblog-token');
+      return localStorage.getItem('paymemymoney-token');
     }
     function isLoggedIn(){
       var token = getToken();
@@ -85,7 +89,7 @@
       }
     }
     function logout(){
-      localStorage.removeItem('mymeanblog-token');
+      localStorage.removeItem('paymemymoney-token');
     }
     return {
       getAll: getAll,
@@ -98,7 +102,7 @@
       saveToken: saveToken,
       getToken: getToken,
       isLoggedIn: isLoggedIn,
-      Logout: logout
+      logout: logout
     }
   }
 }());

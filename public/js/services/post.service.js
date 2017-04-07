@@ -1,5 +1,5 @@
 (function() {
-  angular.module('mymeanblog')
+  angular.module('paymemymoney')
        .factory('PostService', PostService);
 
   PostService.$inject = ['$http'];
@@ -15,7 +15,7 @@
   function getOne(id){
     var url = '${base}/${id}';
     return $http.get(url)
-                .then(funtion(resonse){
+                .then(function(response){
                   console.log(response);
                 });
   }

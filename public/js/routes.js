@@ -1,5 +1,5 @@
 (function (){
-  angular.module('mymeanblog')
+  angular.module('paymemymoney')
         .config(RouterConfig);
 
 RouterConfig.$inject = ['$routeProvider'];
@@ -8,20 +8,20 @@ function RouterConfig($routeProvider){
   $routeProvider
   .when('/', {
     controller: 'SignupController',
-    templateUrl: 'html/views/signup.html'
+    templateUrl: 'html/views/signup.html',
     restricted: {
           access: false
     }
   })
   .when('/login',{
     controller: 'LoginController',
-    templateUrl: html/views/login.html,
+    templateUrl: 'html/views/login.html',
     restricted: {
       access: true
     }
   })
   .when('/dashboard', {
-    controller: DashboardController,
+    controller: 'DashboardController',
     templateUrl: 'html/views/create.html',
     restricted: {
       access: true
@@ -41,11 +41,18 @@ function RouterConfig($routeProvider){
       access: true
     }
   })
+  .when('/signup', {
+    controller: 'SignupController',
+    templateUrl: 'html/views/signup.html',
+    restricted: {
+      access: false,
+    }
+  })
   .otherwise({
     redirectTo: '/',
     restricted: {
       access: false
     }
   });
- } 
+ }
 }());

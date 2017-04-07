@@ -1,12 +1,12 @@
 (function() {
-  angular.module('mymeanblog')
+  angular.module('paymemymoney')
          .run(AuthConfig);
 
  AuthConfig.$inject = ['UserService', '$location', "$rootScope"];
 
   function AuthConfig(UserService, $location, $rootScope){
     $rootScope.$on('$routeChangeStart', function(event, nextRoute, currentRoute){
-      if(nextRoute.restriced.access && !UserService.isLoggedin()){
+      if(nextRoute.restricted.access && !UserService.isLoggedIn()){
         $location.path('/');
       }
   });
