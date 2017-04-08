@@ -12,6 +12,7 @@
       UserService.signup(user)
                   .then(function(response){
                     $scope.newUser = {};
+                    $location.path('/login');
                   })
                   .catch(function(err){
                     console.log(err);

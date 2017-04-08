@@ -2,33 +2,32 @@
   angular.module('paymemymoney')
         .controller('DashboardController', DashboardController);
 
-  DashboardController.$inject = ['$scope'];
+  DashboardController.$inject = ['$scope', 'PostService', '$location', '$http'];
 
-  function DashboardController($scope){
+  function DashboardController($scope, PostService, $location, $http){
       $scope.edit = edit;
       $scope.delete = deletePost;
-      $scope.posts = [
-        {
-          _id: 'hsdkfhsj3787sdf627ysd67823',
-          title: 'some title',
-          body: 'things and stuff and things and stuff and things and stuff',
-          created: new Date(),
-          updated: new Date()
-        },
-        {
-          _id: 'hsdkfhsj3787sdf627ysd67823',
-          title: 'some title',
-          body: 'things and stuff and things and stuff and things and stuff',
-          created: new Date(),
-          updated: new Date()
-        },
-      ]
+      $scope.posts = [];
 
+
+      populatePosts();
+      function populatePosts(){
+        PostService.getAll()
+                   .then(function(response){
+                     $scope.posts = response.data.posts
+                     $scope.names = response.data.records
+                   })
+                   .catch(function(err){
+                     console.log(err);
+                   });
+      }
       function edit(post){
-        console.log('moving to the edit page');
+        var url = `/edit/${post._id}`;
+        $location.path(url);
       }
       function deletePost(post){
-        console.log('deleting the post with _id of ' + post._id);
+        PostService.delete(post)
+                   .then(populatePosts); //I did this because .then can run the next function
       }
   }
 }());

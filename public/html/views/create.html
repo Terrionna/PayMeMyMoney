@@ -1,9 +1,15 @@
 <div>
-  <label>Title</label>
+  <label>Debt</label>
   <input type="text" ng-model='post.title'>
 </div>
 <div>
-  <label>Body:</label>
-
+  <table>
+  <tr ng-repeat="post in names">
+    <td>{{ post.Name }}</td>
+    <td>{{ post.Amount }}</td>
+    <td> {{ post.Loan Date }}</td>
+    <td>{{ post.Due Date }}</td>
+  </tr>
+</table>
 </div>
 <button ng-click='create(post)'>Create</button>

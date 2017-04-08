@@ -20,7 +20,7 @@ var postSchema = mongoose.Schema({
   },
   dateOwed: {
     type: Date,
-    default: Date.now
+    required: true
   },
   author: {
     required: true,

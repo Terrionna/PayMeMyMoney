@@ -17,7 +17,7 @@ function RouterConfig($routeProvider){
     controller: 'LoginController',
     templateUrl: 'html/views/login.html',
     restricted: {
-      access: true
+      access: false
     }
   })
   .when('/dashboard', {
@@ -45,7 +45,7 @@ function RouterConfig($routeProvider){
     controller: 'SignupController',
     templateUrl: 'html/views/signup.html',
     restricted: {
-      access: false,
+      access: false
     }
   })
   .otherwise({
