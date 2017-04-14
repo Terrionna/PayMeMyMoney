@@ -12,7 +12,7 @@ var postSchema = mongoose.Schema({
   },
   details: {
     type: String,
-    required: true
+    required: false
   },
   dateCreated: {
     type: Date,

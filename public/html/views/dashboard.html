@@ -1,16 +1,22 @@
 <a href="#!/create">Create A New Post</a>
 <hr>
+<table>
+  <th>Debtee</th>
+  <th>Amount</th>
+  <th>IOU Date</th>
+  <th>Due Date</th>
+  <th>Details</th>
+  <th>Edit</th>
 
-<ul>
-  <li ng-repeat='post in posts'>
-    <div>
-      {{ post.title }}
-      {{ post.body.slice(0, 100) + '...'}}
-      <button ng-click="edit(post)">E</button>
-      <button ng-click="delete(post)">&times;</button>
-    </div>
-    <div>
-      <small>by {{ post.author }}</small>
-    </div>
-  </li>
-</ul>
+  <tr ng-repeat="post in posts">
+    <td>{{ post.name }}</td>
+    <td>{{ post.amount }}</td>
+    <td>{{ post.dateCreated }}</td>
+    <td>{{ post.dateOwed }}</td>
+    <td>{{ post.details }}</td>
+    <td>
+      <a roll= button href="html/views/edit.html" >E</a>
+    </td>
+
+  </tr>
+</table>

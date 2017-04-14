@@ -1,15 +1,18 @@
-<div>
-  <label>Debt</label>
-  <input type="text" ng-model='post.title'>
-</div>
-<div>
-  <table>
-  <tr ng-repeat="post in names">
-    <td>{{ post.Name }}</td>
-    <td>{{ post.Amount }}</td>
-    <td> {{ post.Loan Date }}</td>
-    <td>{{ post.Due Date }}</td>
-  </tr>
-</table>
-</div>
+
+
+<label for='name'>Name:</label>
+  <input type="text" ng-model='post.name'>
+
+<label for='amount'></label>
+  <input type="number" ng-model='post.amount'>
+
+<label for='dateCreated'>Lend Date</label>
+<input type="Date" ng-model='post.dateCreated'>
+
+<label for="dateOwed" ng-model='post.dateOwed'></label>
+<input type="date" ng-model='post.dateOwed'>
+
+<label for="details" ng-model='post.details'></label>
+<textarea name="name" rows="8" cols="80" ng-model='post.details'></textarea>
+
 <button ng-click='create(post)'>Create</button>

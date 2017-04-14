@@ -9,7 +9,6 @@
       $scope.delete = deletePost;
       $scope.posts = [];
 
-
       populatePosts();
       function populatePosts(){
         PostService.getAll()
@@ -29,5 +28,6 @@
         PostService.delete(post)
                    .then(populatePosts); //I did this because .then can run the next function
       }
+
   }
 }());

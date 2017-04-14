@@ -22,20 +22,20 @@ function RouterConfig($routeProvider){
   })
   .when('/dashboard', {
     controller: 'DashboardController',
-    templateUrl: 'html/views/create.html',
+    templateUrl: 'html/views/dashboard.html',
     restricted: {
       access: true
     }
   })
   .when('/create', {
-    controller: 'PostController',
+    controller: 'CreateController',
     templateUrl: 'html/views/create.html',
     restricted: {
       access: true
     }
   })
   .when('/edit/:postId', {
-    controller: 'PostController',
+    controller: 'EditController',
     templateUrl: 'html/views/edit.html',
     restricted: {
       access: true
