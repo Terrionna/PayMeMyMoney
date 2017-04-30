@@ -48,6 +48,12 @@ function RouterConfig($routeProvider){
       access: false
     }
   })
+  .when('/testtwilio', {
+    controller:'SignupController',
+    templateUrl: 'html/views/signup.html',
+    restricted: {
+      access: false
+  })
   .otherwise({
     redirectTo: '/',
     restricted: {

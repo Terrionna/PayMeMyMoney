@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var Post = require('../models/post.model');
+var client = require('twilio');
 
 router.get('/posts', function(req, res){
   Post.find({}, function(err, posts){
@@ -64,6 +65,23 @@ router.delete('/posts/:id', function(req, res){
     } else {
       res.status(200).json({
         msg: 'Successfully deleted'
+      });
+    }
+  });
+});
+router.get('/testtwilio', function(req, res){
+  client.sendMessage({
+    to: '+12179044242',
+    from: 'TWILIO_NUMBER',
+    body: 'Hello from Twilio!'
+  }, function(err){
+    if(err){
+      res.status(500).json({
+        msg:err
+      });
+    } else {
+      res.status(201).json ({
+        msg: 'Text was successful'
       });
     }
   });

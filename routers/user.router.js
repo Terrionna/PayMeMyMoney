@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const User = require('../models/user.model');
 const passport = require('passport');
+const client =require('twilio');
 
 router.post('/signup', function(req, res){
   var user = new User(req.body);
@@ -62,6 +63,23 @@ router.get('/users/:id', function(req, res){
     } else {
       res.status(200).json({
         users: users
+      });
+    }
+  });
+});
+router.get('/testtwilio', function(req, res){
+  client.sendMessage({
+    to: '+12179044242',
+    from: 'TWILIO_NUMBER',
+    body: 'Hello from Twilio!'
+  }, function(err){
+    if(err){
+      res.status(500).json({
+        msg:err
+      });
+    } else {
+      res.status(201).json ({
+        msg: 'Text was successful'
       });
     }
   });

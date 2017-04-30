@@ -1,0 +1,17 @@
+
+
+nav {
+  border: 2px solid blue;
+  background: rgb(0, 255, 255);
+  margin-top: 0%;
+  opacity: 0.5;
+}
+form {
+  width: 300px;
+  height: 100px;
+  border-radius: 25px;
+  border: 2px solid #73AD21;
+  float: right;
+  background: white;
+  opacity: 0.8;
+}

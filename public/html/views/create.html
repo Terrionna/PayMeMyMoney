@@ -4,10 +4,10 @@
   <input type="text" ng-model='post.name'>
 
 <label for='amount'></label>
-  <input type="number" ng-model='post.amount'>
+  <input type="number" step=0.01 ng-model='post.amount'/>
 
-<label for='dateCreated'>Lend Date</label>
-<input type="Date" ng-model='post.dateCreated'>
+<label for='dateCreated'></label>
+<input type="date" ng-model='post.dateCreated'>
 
 <label for="dateOwed" ng-model='post.dateOwed'></label>
 <input type="date" ng-model='post.dateOwed'>

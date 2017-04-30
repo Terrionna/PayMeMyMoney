@@ -1,22 +1,37 @@
-<a href="#!/create">Create A New Post</a>
-<hr>
-<table>
-  <th>Debtee</th>
-  <th>Amount</th>
-  <th>IOU Date</th>
-  <th>Due Date</th>
-  <th>Details</th>
-  <th>Edit</th>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>My Money</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+  <a href="#!/create" class='pop'>Create A New Post</a>
+  <hr>
+  <table>
+    <th>Debtee</th>
+    <th>Amount</th>
+    <th>IOU Date</th>
+    <th>Due Date</th>
+    <th>Details</th>
+    <th>Edit</th>
 
-  <tr ng-repeat="post in posts">
-    <td>{{ post.name }}</td>
-    <td>{{ post.amount }}</td>
-    <td>{{ post.dateCreated }}</td>
-    <td>{{ post.dateOwed }}</td>
-    <td>{{ post.details }}</td>
-    <td>
-      <a roll= button href="html/views/edit.html" >E</a>
-    </td>
+    <tr ng-repeat="post in posts">
+      <td>{{ post.name }}</td>
+      <td>{{ post.amount }}</td>
+      <td>{{ post.dateCreated | date }}</td>
+      <td>{{ post.dateOwed | date }}</td>
+      <td>{{ post.details }}</td>
+      <td>
+        <a roll= button href="html/views/edit.html" >E</a>
+      </td>
+      <td>
+        <button ng-click='delete(post)'>Delete</button>
+      </td>
 
-  </tr>
-</table>
+    </tr>
+  </table>
+</body>
+</html>
