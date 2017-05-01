@@ -1,19 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/create.css">
+</head>
+<body>
+  <form>
+  <div class="main"
+  <label for='name'>Name:</label>
+    <input type="text" ng-model='post.name' placeholder="Name">
 
-<span>
-<label for='name'></label>
-  <input type="text" ng-model='post.name' placeholder="Name">
+  <label for='amount'>Amount:</label>
+    <input type="number" ng-model='post.amount' placeholder="Amount">
 
-<label for='amount'></label>
-  <input type="number" ng-model='post.amount' placeholder="Amount">
+  <label for='dateCreated'>Date Loaned:</label>
+  <input type="date" ng-model='post.dateCreated' placeholder="Date Borrowed">
 
-<label for='dateCreated'></label>
-<input type="date" ng-model='post.dateCreated' placeholder="Date Borrowed">
+  <label for="dateOwed" ng-model='post.dateOwed'>Due Date:</label>
+  <input type="date" ng-model='post.dateOwed' placeholder="Due Date">
 
-<label for="dateOwed" ng-model='post.dateOwed'></label>
-<input type="date" ng-model='post.dateOwed' placeholder="Due Date">
-
-<label for="details" ng-model='post.details'></label>
-<textarea name="name" rows="8" cols="80" ng-model='post.details'></textarea>
-
-<button ng-click='create(post)'>Create</button>
-</span>
+  <label for="details" ng-model='post.details'>Details:</label>
+  <textarea name="name" rows="8" cols="80" ng-model='post.details'></textarea>
+  </div>
+ </form>
+  <button ng-click='create(post)'>Create</button>
+</body>
+</html>

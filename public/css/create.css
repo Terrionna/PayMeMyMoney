@@ -1,5 +1,30 @@
-
-span {
-  text-align: center;
+body {
+  background-image: url(https://docs.google.com/uc?export=download&id=0B0yA-ksW26KNbkFJYlVyQkR6dmc);
+}
+label {
   display: block;
+  width: 175px;
+  height: 25px;
+  margin-top: 25px;
+}
+.main {
+  display: block;
+  margin: 0 auto;
+  width: 500px;
+}
+textarea {
+  width: 175px;
+  height: 100px;
+}
+button {
+  width: 175px;
+  height: 75px;
+  color: white;
+  background-color: rgb(83, 113, 163);
+  border-radius: 15px;
+  margin-left: 420px;
+  margin-top: 25px;
+}
+form:first-child {
+  display:block;
 }
