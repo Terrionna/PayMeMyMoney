@@ -8,23 +8,13 @@
     <link rel="stylesheet" href="css/dashboard.css">
 </head>
 <body>
-  <nav ng-controller='NavbarController'>
-    <ul>
-      <li>
-        <a href="#!/login">Login</a>
-      </li>
-      <li>
-        <a href="#!/signup">Signup</a>
-      </li>
-      <li>
-        <a href="#!/dashboard">My Money</a>
-      </li>
-    </ul>
-  </nav>
-</div>
+<header>
+  <button ng-click="logout(user)" id="logout">Logout</button>
+
   <form method="get" action="#!/create">
     <button type="submit" class="create-button">Create A New Post</button>
  </form>
+ </header>
 
   <hr>
   <table>

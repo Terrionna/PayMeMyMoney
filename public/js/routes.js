@@ -46,6 +46,14 @@ function RouterConfig($routeProvider){
       access: true
     }
   })
+  .when('/logout',{
+    controller: 'LogoutController',
+    templateUrl: 'html/views/signup.html',
+    css: 'css/signup.css',
+    restricted: {
+      access: true
+    }
+  })
   .otherwise({
     redirectTo: '/',
     css: 'css/signup.css',

@@ -1,11 +1,17 @@
-
+div {
+  height: 25px;
+}
 body {
   background-image: url(https://docs.google.com/uc?export=download&id=0B0yA-ksW26KNcHAzdDQyZXB2WTA);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 1000px;
 }
+form {
+  height: 50px;
+}
 h1 {
+  margin-top: 80px;
   font-weight: lighter;
   text-align: center;
   font-size: 60px;
@@ -39,16 +45,18 @@ header {
 span {
   text-align: center;
 }
-.input {
-  width: 500px;
+input {
+  width: 200px;
+  border-radius: 15px;
 
 }
 #signup {
-  border-radius: 15px;
   width: 100px;
   height: 35px;
   border: 1px solid white;
+  border-radius: 25px;
   font-family: Palatino,"Palatino Linotype","Palatino LT STD","Book Antiqua",Georgia,serif;
   background: none;
   color: white;
+  margin-bottom: 75px;
 }

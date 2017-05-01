@@ -1,4 +1,15 @@
-
+#logout {
+  border-radius: 20px;
+  color: white;
+  background: none;
+  width: 100px;
+  height: 35px;
+}
+header {
+  background-image: url(https://docs.google.com/uc?export=download&id=0B0yA-ksW26KNcHAzdDQyZXB2WTA);
+  background-size:contain;
+  background-repeat: repeat;
+}
 table, th , td {
   margin-left: auto;
   margin-right: auto;
@@ -28,5 +39,7 @@ th {
   border-radius: 5px;
   font-size: 20px;
   padding-top: 0%;
+  background: none;
+  color: white;
 
 }

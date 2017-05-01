@@ -6,11 +6,12 @@ label {
   width: 175px;
   height: 25px;
   margin-top: 25px;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 .main {
   display: block;
   margin: 0 auto;
-  width: 500px;
+  width: 300px;
 }
 textarea {
   width: 175px;
@@ -22,7 +23,7 @@ button {
   color: white;
   background-color: rgb(83, 113, 163);
   border-radius: 15px;
-  margin-left: 420px;
+  margin-left: 520px;
   margin-top: 25px;
 }
 form:first-child {
