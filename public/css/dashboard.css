@@ -1,6 +1,8 @@
-<style>
+
 table, th , td {
-  border: 1px solid grey;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid white;
   border-collapse: collapse;
   padding: 5px;
 
@@ -11,4 +13,20 @@ table tr:nth-child(odd) {
 table tr:nth-child(even) {
   background-color: #ffffff;
 }
-</style
+th, tr {
+  height: 75px;
+  width:200px;
+}
+th {
+  font-family: tahoma;
+}
+.create-button {
+  margin-left: 500px;
+  width: 200px;
+  height: 75px;
+  font-family: candara;
+  border-radius: 5px;
+  font-size: 20px;
+  padding-top: 0%;
+
+}

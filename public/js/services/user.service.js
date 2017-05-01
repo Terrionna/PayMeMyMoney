@@ -91,7 +91,6 @@
     function logout(){
       localStorage.removeItem('paymemymoney-token');
     }
-    function sendMessage()
     return {
       getAll: getAll,
       login: login,

@@ -9,6 +9,7 @@ function RouterConfig($routeProvider){
   .when('/', {
     controller: 'SignupController',
     templateUrl: 'html/views/signup.html',
+    css: 'css/signup.css',
     restricted: {
           access: false
     }
@@ -16,6 +17,7 @@ function RouterConfig($routeProvider){
   .when('/login',{
     controller: 'LoginController',
     templateUrl: 'html/views/login.html',
+    css: 'css/login.css',
     restricted: {
       access: false
     }
@@ -23,6 +25,7 @@ function RouterConfig($routeProvider){
   .when('/dashboard', {
     controller: 'DashboardController',
     templateUrl: 'html/views/dashboard.html',
+    css: 'css/dashboard.css',
     restricted: {
       access: true
     }
@@ -30,6 +33,7 @@ function RouterConfig($routeProvider){
   .when('/create', {
     controller: 'CreateController',
     templateUrl: 'html/views/create.html',
+    css: 'css/create.css',
     restricted: {
       access: true
     }
@@ -37,25 +41,14 @@ function RouterConfig($routeProvider){
   .when('/edit/:postId', {
     controller: 'EditController',
     templateUrl: 'html/views/edit.html',
+    css: 'css/edit.css',
     restricted: {
       access: true
     }
   })
-  .when('/signup', {
-    controller: 'SignupController',
-    templateUrl: 'html/views/signup.html',
-    restricted: {
-      access: false
-    }
-  })
-  .when('/testtwilio', {
-    controller:'SignupController',
-    templateUrl: 'html/views/signup.html',
-    restricted: {
-      access: false
-  })
   .otherwise({
     redirectTo: '/',
+    css: 'css/signup.css',
     restricted: {
       access: false
     }

@@ -4,22 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Login To Checker</title>
+  <title>DebtPool</title>
   <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
-  <modal id="custom-modal-1">
-    <div class="modal">
-        <div class="modal-body">
-            <h1>Loginn</h1>
-            <p>
-                Home page text: <input type="text" ng-model="vm.bodyText" />
-            </p>
-            <button ng-click="vm.closeModal('custom-modal-1');">Close</button>
-        </div>
+  <span>
+  <form ng-submit='login(user)' class="login-form">
+    <div class="container">
+      <h2>Log in to DebtPool</h2>
+      <div>
+        <input type="text" ng-model='user.email' ng-required='true' placeholder="Email">
+      </div>
+      <div>
+        <input type="password" ng-model="user.password" ng-required='true' placeholder="Password">
+      </div>
+      <button type="submit">Login!</button>
+      <div class="signup-text">
+        <small>Don't have an account? <a href="/">Sign up here!</a></small>
+      </div>
     </div>
-    <div class="modal-background"></div>
-</modal>
-
+  </form>
+ </span>
 </body>
 </html>

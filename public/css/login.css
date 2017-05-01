@@ -1,0 +1,47 @@
+body{
+  background-image: url(https://docs.google.com/uc?export=download&id=0B0yA-ksW26KNbkFJYlVyQkR6dmc);
+  background-size: 500px 500px;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: Candara,Calibri,Segoe,"Segoe UI",Optima,Arial,sans-serif;
+  margin: auto;
+  padding: 0;
+
+}
+.login-form {
+  margin-left: 35%;
+  background-color: rgba(255, 255, 255, 0.4);
+  width:400px;
+}
+
+.login-form h2 {
+  font-weight: lighter;
+  padding-left: 70px;
+}
+
+.login-form input{
+  height: 25px;
+  width: 270px;
+  margin: 5px;
+  font-size: 15px;
+  border: none;
+  margin-left: 68px;
+}
+
+.login-form input:focus{
+  outline: none;
+}
+
+.login-form button {
+  height: 60px;
+  width: 200px;
+  margin-left: 175spx;
+  margin-top: 20px;
+  background-color: rgb(185, 10, 10);
+  outline: none;
+}
+
+.signup-text {
+  padding-top: 20px;
+  padding-left: 90px;
+}

@@ -8,7 +8,24 @@
     <link rel="stylesheet" href="css/dashboard.css">
 </head>
 <body>
-  <a href="#!/create" class='pop'>Create A New Post</a>
+  <nav ng-controller='NavbarController'>
+    <ul>
+      <li>
+        <a href="#!/login">Login</a>
+      </li>
+      <li>
+        <a href="#!/signup">Signup</a>
+      </li>
+      <li>
+        <a href="#!/dashboard">My Money</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+  <form method="get" action="#!/create">
+    <button type="submit" class="create-button">Create A New Post</button>
+ </form>
+
   <hr>
   <table>
     <th>Debtee</th>
@@ -20,7 +37,7 @@
 
     <tr ng-repeat="post in posts">
       <td>{{ post.name }}</td>
-      <td>{{ post.amount }}</td>
+      <td>$ {{ post.amount | number:2 }}</td>
       <td>{{ post.dateCreated | date }}</td>
       <td>{{ post.dateOwed | date }}</td>
       <td>{{ post.details }}</td>

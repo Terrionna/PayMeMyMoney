@@ -4,10 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-    <link rel="stylesheet" href="css/signup.css">
+  <title>DebtPool</title>
 </head>
-<body>
+<body class="main">
+  <header>
+    <button id="login"><a href="#!/login">Login</a></button>
+  </header>
   <span class="signup">
   <form ng-submit='signup(newUser)'>
     <div>
@@ -19,8 +21,14 @@
     <div>
       <input type="password" ng-model='newUser.password' ng-required='true' placeholder="Password">
     </div>
-    <button type="submit">Sign Up</button>
+    <button type="submit" id="Signup" ng-submit='signup(newUser)' id="signup">Sign Up</button>
   </form>
   </span>
+  <h1>
+    Need an Easier Way To Keep <br>Track of Who owes you money?
+  </h1>
+  <p>
+    DebtPool keeps track of who owes <br>you money and makes it simple to remind them. #MaximumEffort
+  </p>
 </body>
 </html>

@@ -1,5 +1,6 @@
 (function() {
   angular.module('paymemymoney', [
-    'ngRoute'
+    'ngRoute',
+    'angularCSS'
   ])
 }());

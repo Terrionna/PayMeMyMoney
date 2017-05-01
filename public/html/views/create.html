@@ -1,18 +1,19 @@
 
-
-<label for='name'>Name:</label>
-  <input type="text" ng-model='post.name'>
+<span>
+<label for='name'></label>
+  <input type="text" ng-model='post.name' placeholder="Name">
 
 <label for='amount'></label>
-  <input type="number" step=0.01 ng-model='post.amount'/>
+  <input type="number" ng-model='post.amount' placeholder="Amount">
 
 <label for='dateCreated'></label>
-<input type="date" ng-model='post.dateCreated'>
+<input type="date" ng-model='post.dateCreated' placeholder="Date Borrowed">
 
 <label for="dateOwed" ng-model='post.dateOwed'></label>
-<input type="date" ng-model='post.dateOwed'>
+<input type="date" ng-model='post.dateOwed' placeholder="Due Date">
 
 <label for="details" ng-model='post.details'></label>
 <textarea name="name" rows="8" cols="80" ng-model='post.details'></textarea>
 
 <button ng-click='create(post)'>Create</button>
+</span>

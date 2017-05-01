@@ -1,15 +1,31 @@
-<div>
-  <label>Your Money</label>
-  <input type="text" ng-model='post.title'>
-</div>
-<div>
-  <label>Debt:</label>
-  <table>
-    <tr ng-repeat="x in names">
-      <td>{{ x.Name }}</td>
-      <td>{{ x.Country }}</td>
-    </tr>
-  </table>
-
-</div>
-<button ng-click="edit(post)">Create</button>
+<div class="form-container">
+     <table>
+       <tr>
+         <td colspan='2'><h3></h3></td>
+       </tr>
+       <tr>
+         <td><label>Name:</label></td>
+         <td><input type="text" ng-model='post.name'></td>
+       </tr>
+       <tr>
+         <td><label>Amount:</label></td>
+         <td><input type="text" ng-model='post.amount'></td>
+       </tr>
+       <tr>
+         <td><label>Date Created :</label></td>
+         <td><input type="text" ng-model='post.dateCreated'></td>
+       </tr>
+       <tr>
+         <td><label>Due Date:</label></td>
+         <td><input type="text" ng-model='post.dateOwed'></td>
+       </tr>
+       <tr>
+         <td><label>Details:</label></td>
+         <td><textarea type="text" ng-model='post.details'></textarea></td>
+       </tr>
+       <tr>
+         <td></td>
+         <td><button ng-click="edit(post)">ChaChing!</button></td>
+       </tr>
+     </table>
+   </div>

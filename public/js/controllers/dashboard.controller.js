@@ -9,6 +9,7 @@
       $scope.delete = deletePost;
       $scope.posts = [];
 
+
       populatePosts();
       function populatePosts(){
         PostService.getAll()

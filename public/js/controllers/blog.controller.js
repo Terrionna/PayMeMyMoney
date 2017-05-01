@@ -2,7 +2,7 @@ function() {
   angular.module('paymemymoney')
           .controller('BlogController', BlogController);
 
-  BlogController.$inject = ['$scope', 'PostService',];
+  BlogController.$inject = ['$scope', 'PostService'];
 
   function BlogController($scope, PostService){
     $scope.posts = []
